@@ -1,9 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Hidden Scratch Blocks Official",
-  "version": "1.6",
-  "permissions": ["scripting"],
-  "host_permissions": ["*://scratch.mit.edu/*"],
+  "version": "2.0",
   "content_scripts": [
     {
       "matches": ["*://scratch.mit.edu/projects/*"],
