@@ -4,7 +4,7 @@
         const Blocks = window.ScratchBlocks;
 
         const toolboxXML = `
-            <category name="Hidden Blocks" id="hidden_cat" colour="#30126b" secondaryColour="#1f0b45">
+            <category name="Hidden Blocks" id="hidden_cat" colour="#800a0a" secondaryColour="#c70c0c">
                 <block type="event_whentouchingobject">
                     <value name="TOUCHINGOBJECTMENU"><shadow type="event_touchingobjectmenu"/></value>
                 </block>
