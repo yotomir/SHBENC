@@ -16,10 +16,9 @@
             const tree = ws.options.languageTree.innerHTML;
             if (!tree.includes('id="hidden_cat"')) {
                 ws.updateToolbox(tree + toolboxXML);
-                console.log("Activated!");
+                console.log("Activated!!");
             }
         }
     }
-    // Проверява на всеки 2 секунди
     setInterval(injectCategory, 2000);
 })();
