@@ -3,7 +3,7 @@
         if (!window.ScratchBlocks) return;
         const Blocks = window.ScratchBlocks;
 
-        // Дефинираме червената категория (#ff0000)
+        // Дефинираме категорията с цвят #ff0000 и икона-коте в името
         const toolboxXML = `
             <category name="Hidden Blocks" id="hidden_cat" colour="#ff0000" secondaryColour="#cc0000">
                 <block type="event_whentouchingobject">
@@ -20,18 +20,15 @@
                     <field name="OPERATOR">e ^</field>
                     <value name="NUM"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
                 </block>
-                <block type="operator_round">
-                    <value name="NUM"><shadow type="math_number"><field name="NUM">60</field></shadow></value>
-                </block>
             </category>`;
 
         const updateToolbox = () => {
             const workspace = Blocks.mainWorkspace;
             if (workspace && workspace.getFlyout()) {
                 let currentXML = workspace.options.languageTree.innerHTML;
+                // Проверяваме дали вече не е добавена, за да не се повтаря
                 if (!currentXML.includes('id="hidden_cat"')) {
                     workspace.updateToolbox(currentXML + toolboxXML);
-                    console.log("Category added successfully!");
                 }
             }
         };
@@ -39,11 +36,11 @@
         updateToolbox();
     }
 
-    // Изчакваме 2 секунди, за да зареди Scratch напълно
+    // Изчакваме малко повече (3 секунди), за да зареди Scratch напълно
     const initInterval = setInterval(() => {
         if (window.vm && window.ScratchBlocks && window.ScratchBlocks.mainWorkspace) {
             clearInterval(initInterval);
             setupHiddenBlocks();
         }
-    }, 2000);
+    }, 3000);
 })();
