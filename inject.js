@@ -3,8 +3,9 @@
         if (!window.ScratchBlocks) return;
         const Blocks = window.ScratchBlocks;
 
+        // XML за категорията - цвят #ff0000 (червено)
         const toolboxXML = `
-            <category name="Hidden Blocks" id="hidden_cat" colour="#800a0a" secondaryColour="#c70c0c">
+            <category name="Hidden Blocks" id="hidden_cat" colour="#ff0000" secondaryColour="#cc0000">
                 <block type="event_whentouchingobject">
                     <value name="TOUCHINGOBJECTMENU"><shadow type="event_touchingobjectmenu"/></value>
                 </block>
@@ -29,13 +30,16 @@
                 }
             }
         };
+
         updateToolbox();
     }
 
+    // Търсене на работната среда на Scratch
     const initInterval = setInterval(() => {
         if (window.vm && window.ScratchBlocks && window.ScratchBlocks.mainWorkspace) {
             clearInterval(initInterval);
             setupHiddenBlocks();
+            console.log("Hidden Blocks Unlocked in Red! 🔴");
         }
     }, 1000);
 })();
