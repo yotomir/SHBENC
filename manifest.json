@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Hidden Scratch Blocks Official",
+  "version": "1.1",
+  "description": "Adds hidden blocks to Scratch with a red category.",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://scratch.mit.edu/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://scratch.mit.edu/projects/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
