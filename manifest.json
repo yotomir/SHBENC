@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Hidden Scratch Blocks Official",
+  "version": "1.1",
+  "icons": { "128": "icon.png" },
+  "content_scripts": [{
+    "matches": ["https://scratch.mit.edu/projects/*"],
+    "js": ["content.js"]
+  }],
+  "web_accessible_resources": [{
+    "resources": ["inject.js"],
+    "matches": ["https://scratch.mit.edu/*"]
+  }]
+}
